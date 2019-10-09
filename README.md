@@ -9,13 +9,13 @@ The default actions the script will run, don’t need any adjustments when:
 - The USB drive has the files listed under "Preparation" in the root folder.
 
 ## Preparation.
-- Retrieve the get-windowsautopilotinfo.ps1 at
+- Retrieve the get-windowsautopilotinfo.ps1 script at
 > https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.6
 
-- Copy both the Autopilot.ps1 and get-windowsautopilotinfo.ps1 to a usb drive.
+- Copy both the Autopilot.ps1 and get-windowsautopilotinfo.ps1 to a USB drive.
  
 ## Before running the script.
-- Take the machine out of it's box and connect it to AC Power.
+- Take the machine out of its box and connect it to AC Power.
 - Insert the USB drive.
 
 ## Running the script.
@@ -41,19 +41,19 @@ D:\Autopilot.ps1
 ```
 ```
 Let the script run. This will take about 10 seconds. 
-Once you see: “Shutting down device. You can now safely remove the USB drive.” You can remove the USB drive.
-The machine will shutdown on it's own.
+Once you see: “Shutting down the device. You can now safely remove the USB drive.” You can remove the USB drive.
+The machine will shut down on its own.
 Now the machine can be put back into the original box.
 ```
 
 ## Using the Parameters.
 For ease of use, some parameters have been added to the script to be used when running it.
 
-To use the parameters add them to your initial command in powershell to run the script. For example to run the script with:
+To use the parameters add them to your initial command in PowerShell to run the script. For example to run the script with:
 - a different output filename 
 - a different USB drive letter
 - No shutdown
-- Appending to the same file
+- Appending to the same file for multiple machines
 
 Enter:
 ```posh
@@ -133,7 +133,7 @@ D:\Autopilot.ps1 -OutputFile 'NewName.csv' -SecDrive 'E:\' -NoShutDown -Append
 If you are going to use the script more often, and there are certain parameters you feel you need to change every time, then you can adjust the default parameters where necessary: 
  
 ```posh
-$OutputFile = "Name of the output file for appended run. Don’t forget to keep “.csv” after the name."
+$OutputFile = "Name of the output file for an appended run. Don’t forget to keep “.csv” after the name."
 $SName = "Name of the Autopilot script from Microsoft."
 $PrimDrive = "Primary Drive (OS drive) on the local machine to run the script from."
 $TempFol = "Temporary Folder used on the local machine."
